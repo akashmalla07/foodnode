@@ -33,9 +33,20 @@ router.post('/register', function(req, res) {
  res.json(doc);
  });
 */
-  login.insert(req.body, function(err, doc) {
+  /*login.save(req.body, function(err, doc) {
     res.json(doc);
     console.log(doc)
+  });*//*
+ var login1 = new login(req.body);
+ console.log(login1);
+  login1.save(function (err, result) {
+    console.log(err);
+    console.log(result);
+    res.json(result);
+  });*/
+ login.create(req.body, function (err, post) {
+    if (err) return next(err);
+    res.json(post);
   });
 });
 
