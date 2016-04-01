@@ -9,6 +9,7 @@ var soup = require('../model/soup.js');
 var starter = require('../model/starter.js');
 var maincourse = require('../model/maincourse.js');
 var dessert = require('../model/dessert.js');
+var register = require('../model/register.js');
 
 
 router.post('/login', function(req, res) {
@@ -20,6 +21,22 @@ router.post('/login', function(req, res) {
  res.json(doc);
  });
 
+});
+
+
+router.post('/register', function(req, res) {
+ console.log("i am going to register");
+  console.log(req.body);
+ /* var s = req.body.name;
+  login.findOne({'name':s},function(err,doc){
+  console.log(doc);
+ res.json(doc);
+ });
+*/
+  login.insert(req.body, function(err, doc) {
+    res.json(doc);
+    console.log(doc)
+  });
 });
 
 router.get('/rest', function(req, res) {

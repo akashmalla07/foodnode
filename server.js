@@ -31,6 +31,7 @@ app.get('/soup',routes);
 app.get('/starter',routes);
 app.get('/maincourse',routes);
 app.get('/dessert',routes);
+app.get('/register',routes);
 // listen (start app with node server.js) ======================================
 app.listen(port);
 console.log("App listening on port " + port);
