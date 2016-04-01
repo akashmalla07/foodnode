@@ -9,7 +9,7 @@ var soup = require('../model/soup.js');
 var starter = require('../model/starter.js');
 var maincourse = require('../model/maincourse.js');
 var dessert = require('../model/dessert.js');
-var register = require('../model/register.js');
+//var register = require('../model/register.js');
 
 
 router.post('/login', function(req, res) {
